@@ -1,0 +1,322 @@
+html {
+  --bg: hsl(230, 17%, 14%);
+  --white: hsl(0, 0%, 100%);
+  --desaturated-blue: hsl(228, 34%, 66%);
+  --top-hr-line: hsl(232, 19%, 25%);
+  --dark-toggle: linear-gradient(hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+  --card-bg-dark-blue: hsl(228, 28%, 20%);
+  --lime-green: hsl(163, 72%, 41%);
+  --bright-red: hsl(356, 69%, 56%);
+  --facebook: hsl(195, 100%, 50%);
+  --twitter: hsl(203, 89%, 53%);
+  --youTube: hsl(348, 97%, 39%);
+}
+
+html[data-theme='light'] {
+  --bg: hsl(0, 0%, 100%);
+  --white: hsl(230, 17%, 14%);
+  --desaturated-blue: hsl(228, 12%, 44%);
+  --top-hr-line: hsl(225, 100%, 98%);
+  --card-bg-dark-blue: hsl(227, 47%, 96%);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg);
+  font-family: 'Inter', sans-serif;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Heading Section */
+main {
+  padding-top: 15px;
+  width: 85vw;
+  margin: auto;
+}
+
+.heading {
+  color: var(--white);
+  font-size: 1.2em;
+}
+
+.total-followers {
+  margin-top: -10px;
+  color: var(--desaturated-blue);
+  padding-bottom: 30px;
+  border-bottom: 1px solid var(--top-hr-line);
+  font-weight: 700;
+}
+
+.dark-mode {
+  color: var(--desaturated-blue);
+  font-weight: 700;
+}
+
+.toggle-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+/* toggle button styling */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 55px;
+  height: 30px;
+  margin-top: 8px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  outline: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--dark-toggle);
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 24px;
+  width: 24px;
+  left: 4px;
+  bottom: 3px;
+  background: var(--bg);
+  -webkit-transition: 700ms;
+  transition: 700ms;
+}
+
+input:checked + .slider {
+  background: #aeb3cb;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+          transform: translateX(26px);
+  background: white;
+}
+
+.slider.round {
+  border-radius: 20px;
+  outline: none;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* toggle button*/
+/*social media card section  */
+.social-media-card-wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(100%, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+  grid-gap: 30px;
+}
+
+.social-media-card {
+  background: var(--card-bg-dark-blue);
+  border-radius: 5px;
+  text-align: center;
+  padding: 30px 0;
+  cursor: pointer;
+}
+
+.social-media-card:hover {
+  background-color: var(--top-hr-line);
+}
+
+.facebook-card {
+  border-top: 4px solid var(--facebook);
+}
+
+.twitter-card {
+  border-top: 4px solid var(--twitter);
+}
+
+.instagram-card {
+  border-top: 4px solid orange;
+}
+
+.youtube-card {
+  border-top: 4px solid var(--youTube);
+}
+
+.username-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.username-container span {
+  color: var(--desaturated-blue);
+  margin-left: 10px;
+}
+
+.total-number {
+  font-size: 3em;
+  padding: 0;
+  margin: 20px 0;
+  color: var(--white);
+}
+
+.additional-number-green {
+  color: var(--lime-green);
+}
+
+.additional-number-red {
+  color: var(--bright-red);
+}
+
+.additional-number-grey {
+  color: var(--desaturated-blue);
+}
+
+.title {
+  margin-top: -23px;
+  padding-bottom: 8px;
+  color: var(--desaturated-blue);
+  letter-spacing: 3px;
+  font-weight: 200;
+  font-size: 0.8em;
+}
+
+/* Overview Section */
+.overview-text {
+  color: var(--white);
+  margin-top: 50px;
+  font-weight: 400;
+  font-size: 1.5em;
+}
+
+.overview-card-wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(100%, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+  grid-gap: 20px;
+}
+
+.overview-card {
+  background: var(--card-bg-dark-blue);
+  border-radius: 5px;
+  text-align: center;
+  padding: 15px 0 0 0;
+  cursor: pointer;
+}
+
+.overview-card:hover {
+  background-color: var(--top-hr-line);
+}
+
+.overview-card-inner {
+  width: 80%;
+  margin: auto;
+}
+
+.title-icon-container,
+.view-count-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.view-count-container h3 {
+  font-size: 2em;
+}
+
+.title-icon-container img {
+  height: 25px;
+  margin-top: 15px;
+}
+
+.count-container {
+  margin-top: 48px;
+}
+
+.total-number-white {
+  color: var(--white);
+}
+
+/* Footer section */
+.attribution {
+  font-size: 16px;
+  text-align: center;
+  color: #8d8d91;
+}
+
+.attribution a {
+  color: var(--facebook);
+  text-decoration: none;
+}
+
+/* For medium sized screens */
+/* From 600px and above and 900px and below ie 600px - 900px */
+@media (min-width: 600px) and (max-width: 900px) {
+  .heading {
+    font-size: 2em;
+  }
+  .social-media-card-wrapper,
+  .overview-card-wrapper {
+    -ms-grid-columns: (minmax(40%, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
+  }
+}
+
+/* For wider screens 800px and above */
+@media (min-width: 900px) {
+  .heading {
+    font-size: 2em;
+  }
+  .total-followers {
+    border-bottom: none;
+  }
+  .toggle-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 20px;
+  }
+  .dark-mode {
+    margin-right: 20px;
+  }
+  header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .social-media-card-wrapper,
+  .overview-card-wrapper {
+    -ms-grid-columns: (minmax(20%, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(20%, 1fr));
+  }
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,246 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: hsl(230, 17%, 14%);
+    font-family: 'Inter', sans-serif;
+}
+*{
+    box-sizing: border-box;
+}
+
+/* Heading Section */
+main{
+    padding-top: 15px;
+    width: 85vw;
+    margin: auto;
+}
+.heading{
+    color: hsl(0, 0%, 100%);
+    font-size: 1.2em;
+}
+.total-followers{
+    margin-top: -10px;
+    color: hsl(228, 34%, 66%);
+    padding-bottom: 30px;
+    border-bottom: 1px solid hsl(232, 19%, 25%);
+    font-weight: 700;
+}
+.dark-mode{
+    color: hsl(228, 34%, 66%);
+    font-weight: 700;
+}
+.toggle-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* toggle button styling */
+.switch{
+    position: relative;
+    display: inline-block;
+    width: 55px;
+    height: 30px;
+    margin-top: 8px;
+}
+
+.switch input{
+    opacity: 0;
+    width: 0;
+    height: 0;
+    outline: none;
+}
+.slider{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+    transition: 4s;
+}
+.slider:before{
+    position: absolute;
+    content: "";
+    height: 24px;
+    width: 24px;
+    left: 4px;
+    bottom: 4px;
+    background: hsl(230, 17%, 14%);
+    transition: 700ms;
+}
+input:checked + .slider {
+    background: hsl(230, 22%, 74%);
+}
+input:focus + .slider{
+    box-shadow: 0 0 1px #2196F3;
+}
+input:checked + .slider:before {
+    transform: translateX(26px);
+    background: hsl(0, 0%, 100%);
+}
+.slider.round{
+    border-radius: 34px;
+    outline: none;
+}
+.slider.round:before{
+    border-radius: 50%;
+}
+
+/*social media card section  */
+.social-media-card-wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(100%,1fr));
+    grid-gap: 30px;
+}
+.social-media-card{
+    background: hsl(228, 28%, 20%);
+    border-radius: 5px;
+    text-align: center;
+    padding: 30px 0;
+    cursor: pointer;
+}
+.social-media-card:hover{
+    background-color: hsl(232, 19%, 25%);
+}
+.facebook-card{
+    border-top: 4px solid hsl(195, 100%, 50%);
+}
+.twitter-card{
+    border-top: 4px solid hsl(203, 89%, 53%);
+}
+.instagram-card{
+    border-top: 4px solid orange;
+}
+
+.youtube-card{
+    border-top: 4px solid hsl(348, 97%, 39%);
+}
+.username-container{
+    display: flex;
+    justify-content: center;
+}
+.username-container span{
+    color: hsl(228, 34%, 66%);
+    margin-left: 10px;
+}
+.total-number{
+    font-size: 3em;
+    padding: 0;
+    margin: 20px 0;
+    color: hsl(0, 0%, 100%);
+}
+.additional-number-green{
+    color: hsl(163, 72%, 41%);
+}
+.additional-number-red{
+    color: hsl(356, 69%, 56%);
+}
+.additional-number-grey{
+    color: hsl(228, 34%, 66%);
+}
+.title{
+    margin-top: -23px;
+    padding-bottom: 8px;
+    color: hsl(228, 34%, 66%);
+    letter-spacing: 3px;
+    font-weight: 200;
+    font-size: 0.8em;
+}
+
+
+/* Overview Section */
+.overview-text{
+    color: hsl(0, 0%, 100%);
+    margin-top: 50px;
+    font-weight: 400;
+    font-size: 1.5em;
+}
+.overview-card-wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(100%,1fr));
+    grid-gap: 20px;
+}
+.overview-card{
+    background: hsl(228, 28%, 20%);
+    border-radius: 5px;
+    text-align: center;
+    padding: 15px 0 0 0;
+    cursor: pointer;
+}
+.overview-card:hover{
+    background-color: hsl(232, 19%, 25%);
+}
+.overview-card-inner{
+    width: 80%;
+    margin: auto;
+}
+.title-icon-container,
+.view-count-container{
+    display: flex;
+    justify-content: space-between;
+}
+.view-count-container h3{
+    font-size: 2em;
+}
+.title-icon-container img{
+    height: 25px;
+    margin-top: 15px;
+}
+.count-container{
+    margin-top: 48px;
+}
+
+.total-number-white{
+    color: hsl(0, 0%, 100%);
+}
+
+
+/* Footer section */
+.attribution {
+    font-size: 16px; 
+    text-align: center;
+    color: hsl(228, 2%, 56%);
+}
+.attribution a {
+    color: hsl(195, 100%, 50%);
+    text-decoration: none;
+}
+
+
+/* For medium sized screens */
+/* From 600px and above and 900px and below ie 600px - 900px */
+@media(min-width: 600px) and (max-width: 900px){
+    .heading{
+        font-size: 2em;
+    }
+    .social-media-card-wrapper,
+    .overview-card-wrapper{
+        grid-template-columns: repeat(auto-fit,minmax(40%,1fr));
+    }
+}
+
+/* For wider screens 800px and above */
+@media(min-width: 900px){
+    .heading{
+        font-size: 2em;
+    }
+    .total-followers{
+        border-bottom: none;
+    }
+    .toggle-container{
+        display: flex;
+        margin-top: 20px;
+    }
+    .dark-mode{
+        margin-right: 20px;
+    }
+    header{
+        display: flex;
+        justify-content: space-between;
+    }
+    .social-media-card-wrapper,
+    .overview-card-wrapper{
+        grid-template-columns: repeat(auto-fit,minmax(20%,1fr));
+    }
+}

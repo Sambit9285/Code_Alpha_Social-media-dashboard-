@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+  
+  <title> Social Media Dashboard</title>
+
+  
+  
+</head>
+<body>
+  <main>
+    <header>
+      <div class="heading-container">
+        <h1 class="heading">Social Media Dashboard</h1>
+        <p class="total-followers">Total Followers: 20,000</p>
+      </div>
+      <div class="toggle-container">
+        <p class="dark-mode" id="dark-mode" >Dark Mode</p>
+        <!-- <div>
+          <input type="checkbox" id="switch" name="theme">
+          <label for="switch">Toggle</label>
+        </div> -->
+        <label class="switch">
+          <input type="checkbox" id="input">
+          <span class="slider round"></span>
+        </label>
+      </div>
+    </header>
+  
+  <section class="social-media-card-wrapper">
+    <section class="social-media-card facebook-card">
+      <div class="social-media-total">
+        <div class="username-container">
+          <img src="images/icon-facebook.svg" alt='facebook'>
+          <span>@Sambit</span>
+        </div>
+        <h2 class="total-number">1987</h2>
+        <h3 class="title">FOLLOWERS</h3>
+        <div class="current-total-container">
+          <img src="images/icon-up.svg" alt='arrow'>
+          <span class="additional-number-grey">12 Today</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="social-media-card twitter-card">
+      <div class="social-media-total">
+        <div class="username-container">
+          <img src="images/icon-twitter.svg" alt='twitter' alt='twitter'>
+          <span>@sambit</span>
+        </div>
+        <h2 class="total-number">1044</h2>
+        <h3 class="title">FOLLOWERS</h3>
+        <div class="current-total-container">
+          <img src="images/icon-up.svg" alt='arrow'>
+          <span class="additional-number-green">99 Today</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="social-media-card instagram-card">
+      <div class="social-media-total">
+        <div class="username-container">
+          <img src="images/icon-instagram.svg" alt='instagram'>
+          <span>@sambitkumar</span>
+        </div>
+        <h2 class="total-number">11k</h2>
+        <h3 class="title">FOLLOWERS</h3>
+        <div class="current-total-container">
+          <img src="images/icon-up.svg"  alt='arrow'>
+          <span class="additional-number-green">1099 Today</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="social-media-card youtube-card">
+      <div class="social-media-total">
+        <div class="username-container">
+          <img src="images/icon-youtube.svg" alt='youtube'>
+          <span>@some of bits</span>
+        </div>
+        <h2 class="total-number">8239</h2>
+        <h3 class="title">SUBSCRIBERS</h3>
+        <div class="current-total-container">
+          <img src="images/icon-down.svg" alt='arrow'>
+          <span class="additional-number-red">144 Today</span>
+        </div>
+      </div>
+    </section>
+  </section>
+    
+
+    <section class="overview-section">
+      <header class="overview-header">
+        <h2 class="overview-text">Overview - Today</h2>
+      </header>
+
+      <section class="overview-card-wrapper">
+        <section class="overview-card">
+          <div class="overview-card-inner">
+            <div class="title-icon-container">
+              <p class="additional-number-grey">Page Views</p>
+              <img src="images/icon-facebook.svg" alt='facebook'>
+            </div>
+            <div class="view-count-container">
+              <h3 class="total-number-white">87</h3>
+              <div class="count-container">
+                <img src="images/icon-up.svg" alt='arrow'>
+                <span class="additional-number-green">3%</span>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        <section class="overview-card">
+          <div class="overview-card-inner">
+            <div class="title-icon-container">
+              <p class="additional-number-grey">Likes</p>
+              <img src="images/icon-facebook.svg" alt='facebook'>
+            </div>
+            <div class="view-count-container">
+              <h3 class="total-number-white">52</h3>
+              <div class="count-container">
+                <img src="images/icon-down.svg"  alt='arrow'>
+                <span class="additional-number-red">2%</span>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        <section class="overview-card">
+          <div class="overview-card-inner">
+            <div class="title-icon-container">
+              <p class="additional-number-grey">Likes</p>
+              <img src="images/icon-instagram.svg" alt='instagram'>
+            </div>
+            <div class="view-count-container">
+              <h3 class="total-number-white">5462</h3>
+              <div class="count-container">
+                <img src="images/icon-up.svg" alt='arrow'>
+                <span class="additional-number-green">2257%</span>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        <section class="overview-card">
+          <div class="overview-card-inner">
+            <div class="title-icon-container">
+              <p class="additional-number-grey">Profile Views</p>
+              <img src="images/icon-instagram.svg" alt='instagram'>
+            </div>
+            <div class="view-count-container">
+              <h3 class="total-number-white">52k</h3>
+              <div class="count-container">
+                <img src="images/icon-up.svg" alt='arrow'>
+                <span class="additional-number-green">1375%</span>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        <section class="overview-card">
+          <div class="overview-card-inner">
+            <div class="title-icon-container">
+              <p class="additional-number-grey">Retweets</p>
+              <img src="images/icon-twitter.svg" alt='twitter'>
+            </div>
+            <div class="view-count-container">
+              <h3 class="total-number-white">117</h3>
+              <div class="count-container">
+                <img src="images/icon-up.svg" alt='arrow'>
+                <span class="additional-number-green">303%</span>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        <section class="overview-card">
+          <div class="overview-card-inner">
+            <div class="title-icon-container">
+              <p class="additional-number-grey">Likes</p>
+              <img src="images/icon-twitter.svg" alt='twitter'>
+            </div>
+            <div class="view-count-container">
+              <h3 class="total-number-white">507</h3>
+              <div class="count-container">
+                <img src="images/icon-up.svg" alt='arrow'>
+                <span class="additional-number-green">553%</span>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        <section class="overview-card">
+          <div class="overview-card-inner">
+            <div class="title-icon-container">
+              <p class="additional-number-grey">Likes</p>
+              <img src="images/icon-youtube.svg" alt='youtube'>
+            </div>
+            <div class="view-count-container">
+              <h3 class="total-number-white">107</h3>
+              <div class="count-container">
+                <img src="images/icon-down.svg" alt='arrow'>
+                <span class="additional-number-red">19%</span>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        <section class="overview-card">
+          <div class="overview-card-inner">
+            <div class="title-icon-container">
+              <p class="additional-number-grey">Total Views</p>
+              <img src="images/icon-youtube.svg" alt='youtube'>
+            </div>
+            <div class="view-count-container">
+              <h3 class="total-number-white">1407</h3>
+              <div class="count-container">
+                <img src="images/icon-down.svg" alt='arrow'>
+                <span class="additional-number-red">12%</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+      
+    </section>
+  </main>
+
+  <script src="script.js" ></script>
+</body>
+</html>
